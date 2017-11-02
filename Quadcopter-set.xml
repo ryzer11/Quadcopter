@@ -1,0 +1,50 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+
+
+<PropertyList> <!-- dont think i need the include="Quadcopter-base.xml" here-->
+
+	<sim>
+		<description>QuadCopter (YASim)</description>
+		<aircraft-version>0.1</aircraft-version>
+		<status>alpha</status>
+		  <rating>
+            <FDM type="int">1</FDM>
+            <systems type="int">1</systems>
+            <model type="int">1</model>
+            <cockpit type="int">1</cockpit>
+		</rating>
+		<author> Ryan Palmer (FDM), James Mamone + Razvan Turc (3D Models)</author>	 
+		<flight-model>yasim</flight-model>
+		<aero>Quadcopter</aero>
+		
+		
+		
+		<tags>
+			<tag>Drone</tag>
+			<tag>Quadcopter</tag>
+			<tag>UAV</tag>
+		</tags>	
+	 
+		<startup>
+			<splash-texture>Aircraft/QuadCopter/Splash/Quadcopter-splash.png</splash-texture>
+			<splash-title>Quadcopter</splash-title>
+		</startup>
+		 
+		<model>
+			<path>Aircraft\Quadcopter\Models\Quadcopter.xml</path> <!-- take out archive bit if it doesnt work archive="y">Aircraft/QuadCopter/Models/Quadcopter.xml-->
+		</model>
+	</sim>
+	
+	<input>
+			<keyboard include="Nasal/alouette-keyboard.xml"/>
+	</input>
+	
+	<nasal>
+    <doors>
+    </doors>
+    <alouette>
+     <file>Aircraft/Quadcopter/Nasal/alouette.nas</file>
+    </alouette>
+  </nasal>
+	
+</PropertyList>
